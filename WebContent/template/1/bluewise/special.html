@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>${node.name}_${site.fullNameOrName}</title>
+<meta name="keywords" content="${node.keywords}"/>
+<meta name="description" content="${node.description}"/>
+[#include 'inc_head.html'/]
+<link type="text/css" rel="stylesheet" href="_files/global.css"/>
+</head>
+<body>
+[#include 'inc_header.html'/]
+<div class="center">
+  当前位置：[#list node.hierarchy as node]<a href="${node.url}">${node.name}</a>[#if node_has_next] > [/#if][/#list]
+</div>
+<script type="text/javascript">$.get("${ctx}/node_views/${node.id}.jspx?d="+new Date()*1);</script>
+<div class="center"><span id="node_views"></span><script type="text/javascript">$("#node_views").load("${ctx}/node_views/${node.id}.jspx?d="+new Date()*1);</script></div>
+<div class="center">
+  <div style="float:left;width:200px;border:1px solid #999;">
+    <div style="padding:10px;">
+      <h2>[@Node number='company';n]<a href="${n.url}">${n.name}</a>[/@Node]</h2>
+      <ul>
+      [@NodeList parent='company';list]
+      [#list list as n]
+        <li><a href="${n.url}">${n.name}</a></li>
+      [/#list]
+      [/@NodeList]
+      [#--
+      [@NodePage parent='company' pageSize=2;pagedList]
+      [#list pagedList.content as n]
+        <li><a href="${n.url}">${n.name}</a></li>
+      [/#list]
+        [#include 'page.html'/]      
+      [/@NodePage]
+      --]
+      </ul>
+    </div>
+  </div>
+  <div style="float:right;width:735px;border:1px solid #999;">
+    <div style="padding:10px;">
+      <h1>按节点ID取信息</h1>
+      <ul>
+        [@InfoPage nodeId=node.id isMainNodeOnly='true' pageSize='10';pagedList]
+        [#list pagedList.content as info]
+        <li><a href="${info.url}">${substring(info.title,20,'...')}</a></li>
+        [/#list]
+        [#include 'page.html'/]
+        [/@InfoPage]
+      </ul>
+    </div>
+  </div>
+  <div style="clear:both;"></div> 
+</div>
+[#include 'inc_footer.html'/]
+</body>
+</html>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 4.0//EN"
+        "http://www.tuckey.org/res/dtds/urlrewrite4.0.dtd">
+<urlrewrite>
+  <!-- 
+  <rule>
+    <from>^/template/(.*)$</from>
+    <to last="true">-</to>
+  </rule>
+   -->
+  <rule>
+    <from>^/static/(.*)\.html$</from>
+    <to last="true">-</to>
+  </rule>
+  <rule>
+    <from>^/cmscp/(.*)$</from>
+    <to last="true">-</to>
+  </rule>
+  <rule>
+    <from>^/errors/(.*)$</from>
+    <to last="true">-</to>
+  </rule>
+  <rule>
+    <from>^(.*)\.html$</from>
+    <to>/html$1.html</to>
+  </rule>
+  <rule>
+    <from>^(.*)/$</from>
+    <to>/html$1/</to>
+  </rule>
+</urlrewrite>

@@ -1,0 +1,40 @@
+html,body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,th,td,img,div,table{margin:0;padding:0;}
+html,body{font:12px/1.5 tahoma,arial,\5b8b\4f53;color:#2d374b;}
+h1,h2,h3,h4,h5,h6{font-size:100%;}
+ul,ol{list-style:none;}
+fieldset,img{border:0;}
+
+a:link,a:visited{color:#2d374b;text-decoration:none;}
+a:hover{color:#cd0200;text-decoration:underline;}
+a:active{color:#DDD;text-decoration:underline;}
+a:focus{color:blue;text-decoration:none;}
+h6 a{font-size:14px;font-family:\5FAE\8F6F\96C5\9ED1;}
+h6 a:link,h6 a:visited{color:#458fce;text-decoration:none;}
+h6 a:hover,h6 a:active,h6 a:focus{color:#458fce;text-decoration:underline;}
+
+label.error {color:red;font-style:italic;}
+.clear{clear:both;}
+
+.page{font-size:12px;}
+.page-a{float:left;height:26px;line-height:26px;padding:0 8px;margin:0 3px;background-color:#f0f0f0;border:#cccccc solid 1px;}
+.page-a:link,.page-a:visited{text-decoration:none;color:#000000;}
+.page-a:hover,.page-a:active{text-decoration:none;color:#ff6600;}
+.page-curr{float:left;height:26px;line-height:26px;padding:0 8px;margin:0 3px;background-color:#ffffff;border:#ff6600 solid 1px;color:#ff6600}
+.page-curr:link,.page-curr:visited{text-decoration:none;color:#ff6600;}
+.page-curr:hover,.page-curr:active{text-decoration:none;color:#ff6600;}
+
+.center{width:950px;margin:0 auto;}
+.nav{padding:20px 0;}
+.nav li{float:left;padding:0 20px;font-size:14px;}
+
+.block{float:left;width:280px;border:1px solid #999;padding:10px;margin:5px;line-height:200%;}
+.title{line-height:200%;text-align:center;padding:16px 16px;font-size:26px;font-weight:normal;font-family:\5FAE\8F6F\96C5\9ED1;}
+.text{line-height:200%;font-size:14px;}
+.text p{padding-bottom:15px;text-indent:2em;}
+
+#footer{background-color:#f6f6f2;padding-top:20px;margin-top:6px;}
+#footer-link{text-align:center;}
+#copyright{text-align:center;color:#666666;padding:10px 0 20px 0;}
+#copyright span{padding:0 5px;}
+#copyright a:link,#copyright a:visited{text-decoration:none;color:#3778c6;}
+#copyright a:hover,#copyright a:active{text-decoration:underline;color:#3778c6}
